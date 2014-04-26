@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EEBFC648-7D4E-48A9-A77D-9EE968C13C35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fanex.AccountingReports.ReportingService</RootNamespace>
+    <AssemblyName>Fanex.AccountingReports.ReportingService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fanex.Common, Version=1.0.404.97, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Dependencies\Fanex.NAP.Framework\Fanex.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Data, Version=0.5.404.59, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Dependencies\Fanex.NAP.Framework\Fanex.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.Logging">
+      <HintPath>..\_Dependencies\Fanex.NAP.Framework\Fanex.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.NAP.Core, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Dependencies\Fanex.NAP.Framework\Fanex.NAP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fanex.NAP.Framework, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_Dependencies\Fanex.NAP.Framework\Fanex.NAP.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\_Dependencies\Entlib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\_Dependencies\Fanex.NAP.Framework\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Fanex.AccountingReports.ReportingService\DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Common\LogExtensions.cs" />
+    <Compile Include="Criteria\CompanyStatement\GetCompanyStatementCriteria.cs" />
+    <Compile Include="Criteria\DailyTurnOver\GetDailyTurnoverCriteria.cs" />
+    <Compile Include="Criteria\GetMatchWinLoss2aCriteria.cs" />
+    <Compile Include="Criteria\MatchWinLoss2a\GetAllDetailReportBySportsCriteria.cs" />
+    <Compile Include="Criteria\MatchWinLoss2a\GetDetailReportByBetTypeCriteria.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Criteria\MatchWinLoss2a\GetMainReportCriteria.cs" />
+    <Compile Include="Criteria\MatchWinLoss2a\GetWinLossByBetTypeCriteria.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Criteria\SuperYesterdayBalance\GetSuperYesterdayBalanceCriteria.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Enums\SuperBalance.cs" />
+    <Compile Include="Enums\TaskType.cs" />
+    <Compile Include="Model\CompanyStatement\CompanyStatementInfo.cs" />
+    <Compile Include="Model\DailyTurnOver\DailyTurnover.cs" />
+    <Compile Include="Model\DailyTurnOver\TurnoverInformation.cs" />
+    <Compile Include="Model\MatchWinLoss2a\SummaryReportByBetType.cs" />
+    <Compile Include="Model\MatchWinLoss2a\WinLossInfo.cs" />
+    <Compile Include="Model\SuperYesterdayBalance\SuperYesterdayBalance.cs" />
+    <Compile Include="Model\TaskQueue.cs" />
+    <Compile Include="Model\TaskQueueDetail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implement\MatchWinLoss2a\MatchWinLoss2aRepository.cs" />
+    <Compile Include="Repositories\Implement\SuperYesterdayBalance\SuperYesterdayBalanceRepository.cs" />
+    <Compile Include="Repositories\Interface\IMatchWinLoss2aRepository.cs" />
+    <Compile Include="Repositories\Interface\IReportingServiceRepository.cs" />
+    <Compile Include="Repositories\Implement\ReportingServiceRepository.cs" />
+    <Compile Include="Repositories\Interface\ISuperYesterdayBalanceRepository.cs" />
+    <Compile Include="Resources\Labels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Labels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ReportingServiceResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportingServiceResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Common\DirectoryExtensions.cs" />
+    <Compile Include="Service\Implement\CompanyStatement\CompanyStatementService.cs" />
+    <Compile Include="Service\Implement\DailyTurnOver\DailyTurnoverService.cs" />
+    <Compile Include="Service\Implement\MatchWinLoss2a\ExportAllDetailReportBySportService.cs" />
+    <Compile Include="Service\Implement\MatchWinLoss2a\ExportAllDetailReportService.cs" />
+    <Compile Include="Service\Implement\MatchWinLoss2a\ExportSummaryReportByBetTypeService.cs" />
+    <Compile Include="Service\Implement\MatchWinLoss2a\MatchWinLoss2aService.cs" />
+    <Compile Include="Service\Implement\MatchWinLoss2a\RowType.cs" />
+    <Compile Include="Service\Implement\SuperYesterdayBalance\SuperYesterdayBalanceService.cs" />
+    <Compile Include="Service\Interface\ICompanyStatementService.cs" />
+    <Compile Include="Service\Interface\IDailyTurnoverService.cs" />
+    <Compile Include="Service\Interface\IMatchWinLoss2aService.cs" />
+    <Compile Include="Service\Interface\ISuperYesterdayBalanceService.cs" />
+    <Compile Include="Service\ReportingServiceQueue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\Implement\CompanyStatement\" />
+    <Folder Include="Repositories\Implement\DailyTurnOver\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Labels.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ReportingServiceResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportingServiceResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fanex.AccountingReports.ReportingService.Core\Fanex.AccountingReports.ReportingService.Core.csproj">
+      <Project>{9EEEF7A4-1B03-4E3A-90B6-778EC5752A47}</Project>
+      <Name>Fanex.AccountingReports.ReportingService.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fanex.AccountingReports.SqLiteDatabase\Fanex.AccountingReports.SqLiteDatabase.csproj">
+      <Project>{064D3284-C9E9-4C6A-B7DF-70F209EDDE98}</Project>
+      <Name>Fanex.AccountingReports.SqLiteDatabase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

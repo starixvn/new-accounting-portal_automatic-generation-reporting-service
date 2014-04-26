@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Functions>
+  <Function Name="Main Report - Match Win Loss (2a)">
+    <Setting Key="Main_MatchWinLoss2a_GetMainReport" SpName="Acc_Rpt_MatchWinLoss2_New" DbName="DBACC.bodb02.bodbAdminNet" Timeout="0"/>
+    <Setting Key="Main_MatchWinLoss2a_GetMainReport_14" SpName="Acc_Rpt_MatchWinLoss2_New14" DbName="DBACC.bodb02.bodbAdminNet" Timeout="0"/>
+    <Setting Key="Main_MatchWinLoss2a_GetThirdPartyCasinoReport" SpName="Acc_Rpt_WinlostCA_Details" DbName="DBACC.bodb02.bodbAdminNet" Timeout="0"/>
+    <Setting Key="Main_MatchWinLoss2a_GetThirdPartyCasinoReport_14" SpName="Acc_Rpt_WinlostCA_Details14" DbName="DBACC.bodb02.bodbAdminNet" Timeout="0"/>
+    <Setting Key="Main_MatchWinloss2a_GetWinLossByBettype" SpName="Acc_Rpt_WinlossByBettype" DbName="DBACC.bodb02.bodbAdminNet"  Timeout="0"/>
+    <Setting Key="Main_MatchWinloss2a_GetWinLossByBettype_14" SpName="Acc_Rpt_WinlossByBettype14" DbName="DBACC.bodb02.bodbAdminNet"  Timeout="0"/>
+  </Function>
+  <Function Name="Special - Daily Turnover">
+    <Setting Key="Special_DailyTurnover_GetReport" SpName="Acc_Rpt_DailyTurnover" DbName="DBACC.bodb02.bodbAdminNet" TimeOut="0" />
+  </Function>
+  <Function Name="Balance - Supper Balance">
+    <Setting Key="Balance_SuperBalance_SuperYesterday" SpName="Acc_Rpt_Balance_Super_Yesterday" DbName="DBACC.bodb02.bodbAdminNet"></Setting>
+  </Function>
+  <Function Name="Statement - Company Statement">
+    <Setting Key="Statement_Get_Company_Statement" SpName="Acc_AllStatementCompany" DbName="DBACC.bodb02.bodbAdminNet"></Setting>
+  </Function>
+</Functions>
