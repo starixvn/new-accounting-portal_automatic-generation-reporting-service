@@ -19,7 +19,7 @@ namespace Fanex.AccountingReports.ReportingService.Common
         private static readonly int _MaxNumberOfDirectories = 3;
 
         /// <summary>
-        /// Checks the and create directory.
+        /// Check the and create directory.
         /// </summary>
         /// <param name="path">The path of directory.</param>
         public static void CheckAndCreateDirectory(string path)
