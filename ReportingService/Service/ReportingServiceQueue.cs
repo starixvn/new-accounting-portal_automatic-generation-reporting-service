@@ -31,6 +31,7 @@ namespace Fanex.AccountingReports.ReportingService.Service
     /// </summary>
     public class ReportingServiceQueue : BaseService
     {
+
         private const string MatchWinLoss2aTaskName = "matchwinloss2a";
         private const string DailyTurnOverTaskName = "dailyturnover";
         private const string SuperYesterdayBalanceTaskName = "superyesterdaybalance";
