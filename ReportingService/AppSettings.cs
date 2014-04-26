@@ -39,8 +39,8 @@ namespace Fanex.AccountingReports.ReportingService
         {
             get
             {
-                var val = ConfigurationManager.AppSettings["Interval"];
-                return val == null ? 1000 : Convert.ToInt32(ConfigurationManager.AppSettings["Interval"]);
+                var val = ConfigurationManager.AppSettings["Interval.Second"];
+                return val == null ? 300 : Convert.ToInt32(ConfigurationManager.AppSettings["Interval.Second"]) * 1000;
             }
         }
 

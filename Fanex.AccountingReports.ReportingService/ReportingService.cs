@@ -79,11 +79,11 @@ namespace Fanex.AccountingReports.ReportingService
         {
             TimeSpan executeTime = new TimeSpan(AppSettings.RunAtHours, AppSettings.RunAtMinutes, 0);
             var currentTime = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, 0);
-
-            ////if (TimeSpan.Compare(currentTime, executeTime) == 0)
-            ////{
-            OnRunning();
-            ////}
+            int compareResult = TimeSpan.Compare(currentTime, executeTime);
+            if (compareResult >= 0)
+            {
+                OnRunning();
+            }
 
             try
             {
