@@ -139,7 +139,7 @@ namespace Fanex.AccountingReports.ReportingService.Service
         private TaskQueueDetail GetTaskMatchWinLoss2a(int id)
         {
             GetMainReportCriteria criteria = new GetMainReportCriteria();
-            criteria.Winlostdate = DateTime.Now.AddDays(-1);
+            criteria.Winlostdate = DateTime.Today.AddDays(-1);
             if (AppSettings.ForceRunning)
             {
                 criteria.Winlostdate = AppSettings.WinlostDateForceRunning;
@@ -158,7 +158,7 @@ namespace Fanex.AccountingReports.ReportingService.Service
         private TaskQueueDetail GetTaskDailyTurnOver(int id)
         {
             GetDailyTurnoverCriteria criteria = new GetDailyTurnoverCriteria();
-            criteria.FromDate = DateTime.Now.AddDays(-1);
+            criteria.FromDate = DateTime.Today.AddDays(-1);
             if (AppSettings.ForceRunning)
             {
                 criteria.FromDate = AppSettings.WinlostDateForceRunning;
@@ -190,7 +190,7 @@ namespace Fanex.AccountingReports.ReportingService.Service
         private TaskQueueDetail GetTaskCompanyStatement(int id)
         {
             GetCompanyStatementCriteria criteria = new GetCompanyStatementCriteria();
-            criteria.FromDate = DateTime.Now.AddDays(-1);
+            criteria.FromDate = DateTime.Today.AddDays(-1);
             if (AppSettings.ForceRunning)
             {
                 criteria.FromDate = AppSettings.WinlostDateForceRunning;

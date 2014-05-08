@@ -48,10 +48,10 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.CompanyStat
                 using (var objectDb = new ObjectDb(criteria.GetSettingKey()))
                 {
                     var reader = objectDb.ExecuteReader(criteria.GetSpParams());
+                    decimal accumulatedTotal = 0;
 
                     while (reader.Read())
                     {
-                        decimal accumulatedTotal = 0;
                         var total = Converter.ToDecimal(reader["totalamt"]);
                         accumulatedTotal += total;
 
