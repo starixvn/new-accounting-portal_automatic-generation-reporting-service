@@ -148,7 +148,7 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.CompanyStat
             }
 
             string reportTitle = string.Format(
-                    ReportingServiceResources.DailyTurnover_ReportTitle,
+                    ReportingServiceResources.CompanyStatement_ReportTitle,
                     criteria.FromDate.ToShortFormatedDate());
             NpoiExcelExtensions.RenderCell(ref worksheet, ref row, currentRow, ref currentColumn, currentRow, currentColumn + 3, reportTitle, headerStyle);
             currentRow += 2;
@@ -158,7 +158,7 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.CompanyStat
             NpoiExcelExtensions.RenderCell(ref worksheet, ref row, currentRow, ref currentColumn, currentRow, currentColumn, "Date", headerStyle);
             NpoiExcelExtensions.RenderCell(ref worksheet, ref row, currentRow, ref currentColumn, currentRow, currentColumn, "Type", headerStyle);
             NpoiExcelExtensions.RenderCell(ref worksheet, ref row, currentRow, ref currentColumn, currentRow, currentColumn, "Total", headerStyle);
-            NpoiExcelExtensions.RenderCell(ref worksheet, ref row, currentRow, ref currentColumn, currentRow, currentColumn, "Acummulated Total", headerStyle);
+            NpoiExcelExtensions.RenderCell(ref worksheet, ref row, currentRow, ref currentColumn, currentRow, currentColumn, "Accummulated Total", headerStyle);
             currentRow++;
         }
 

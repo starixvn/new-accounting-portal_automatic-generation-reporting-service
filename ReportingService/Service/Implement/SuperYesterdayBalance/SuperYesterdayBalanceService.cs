@@ -355,57 +355,23 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.SuperYester
             int currentColumn = 0;
 
             IRow row = worksheet.CreateRow(currentRow);
+            int startMergeColumn = 0;
+            int endMergeColumn = 3;
             NpoiExcelExtensions.RenderCell(
-                ref worksheet,
-                ref row,
-                currentRow,
-                ref currentColumn,
-                currentRow,
-                currentColumn,
-                string.Empty,
-                grandTotalTextStyle);
-            NpoiExcelExtensions.RenderCell(
-                ref worksheet,
-                ref row,
-                currentRow,
-                ref currentColumn,
-                currentRow,
-                currentColumn,
-                string.Empty,
-                grandTotalTextStyle);
-            NpoiExcelExtensions.RenderCell(
-                ref worksheet,
-                ref row,
-                currentRow,
-                ref currentColumn,
-                currentRow,
-                currentColumn,
-                string.Empty,
-                grandTotalTextStyle);
-            NpoiExcelExtensions.RenderCell(
-                ref worksheet,
-                ref row,
-                currentRow,
-                ref currentColumn,
-                currentRow,
-                currentColumn,
-                string.Empty,
-                grandTotalTextStyle);
-            var startMergeColumn = currentColumn - 4;
-            this.RenderMergeCell(
                 ref worksheet,
                 ref row,
                 currentRow,
                 ref startMergeColumn,
                 currentRow,
-                currentColumn - 1,
+                endMergeColumn,
                 Labels.Grand_Total,
                 grandTotalTextStyle);
+            currentColumn = 4;
             NpoiExcelExtensions.RenderCell(
                  ref worksheet,
                 ref row,
                 currentRow,
-                ref startMergeColumn,
+                ref currentColumn,
                 currentRow,
                 currentColumn,
                 report.BaseBalanceTotal.BaseBalance,
