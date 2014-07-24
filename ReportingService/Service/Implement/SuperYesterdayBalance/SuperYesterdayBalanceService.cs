@@ -213,6 +213,9 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.SuperYester
         /// <param name="excelFile">The excel file.</param>
         /// <param name="worksheet">The worksheet.</param>
         /// <param name="currentRow">The current row.</param>
+        [SuppressMessage("StyleCop.CSharp.Nexcel.NexcelCustomRules",
+        "SP2101:MethodMustNotContainMoreLinesThan",
+        Justification = "Reviewed. Suppression is OK here.")]
         private void ExportReportHeader(HSSFWorkbook excelFile, ref ISheet worksheet, ref int currentRow)
         {
             IRow row = null;
@@ -228,7 +231,6 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.SuperYester
             worksheet.SetColumnWidth(0, 60 * NpoiExcelExtensions.FontWidth);
             worksheet.SetColumnWidth(1, 120 * NpoiExcelExtensions.FontWidth);
             worksheet.SetColumnWidth(2, 100 * NpoiExcelExtensions.FontWidth);
-
             string reportTitle = ReportingServiceResources.SuperYesterdayBalance_ReportTitle;
             row = worksheet.CreateRow(currentRow);
             NpoiExcelExtensions.RenderCell(
@@ -250,8 +252,44 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.SuperYester
                 currentRow,
                 ref currentColumn,
                 currentRow,
-                currentColumn + 4,
-                string.Empty,
+                currentColumn,
+                Labels.No,
+                headerStyle);
+            NpoiExcelExtensions.RenderCell(
+                ref worksheet,
+                ref row,
+                currentRow,
+                ref currentColumn,
+                currentRow,
+                currentColumn,
+                Labels.Super,
+                headerStyle);
+            NpoiExcelExtensions.RenderCell(
+                ref worksheet,
+                ref row,
+                currentRow,
+                ref currentColumn,
+                currentRow,
+                currentColumn,
+                Labels.Curency,
+                headerStyle);
+            NpoiExcelExtensions.RenderCell(
+                ref worksheet,
+                ref row,
+                currentRow,
+                ref currentColumn,
+                currentRow,
+                currentColumn,
+                Labels.Balance,
+                headerStyle);
+            NpoiExcelExtensions.RenderCell(
+                ref worksheet,
+                ref row,
+                currentRow,
+                ref currentColumn,
+                currentRow,
+                currentColumn,
+                Labels.BaseRM,
                 headerStyle);
 
             currentRow++;

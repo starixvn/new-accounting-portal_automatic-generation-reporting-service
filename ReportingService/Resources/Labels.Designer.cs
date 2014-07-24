@@ -79,11 +79,29 @@ namespace Fanex.AccountingReports.ReportingService.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Balance.
+        /// </summary>
+        internal static string Balance {
+            get {
+                return ResourceManager.GetString("Balance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Base (RM).
         /// </summary>
         internal static string BARM {
             get {
                 return ResourceManager.GetString("BARM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Base(RM).
+        /// </summary>
+        internal static string BaseRM {
+            get {
+                return ResourceManager.GetString("BaseRM", resourceCulture);
             }
         }
         
@@ -129,6 +147,15 @@ namespace Fanex.AccountingReports.ReportingService.Resources {
         internal static string Comm {
             get {
                 return ResourceManager.GetString("Comm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Currency.
+        /// </summary>
+        internal static string Curency {
+            get {
+                return ResourceManager.GetString("Curency", resourceCulture);
             }
         }
         
@@ -250,6 +277,15 @@ namespace Fanex.AccountingReports.ReportingService.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        internal static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to N/A.
         /// </summary>
         internal static string NotAvailable {
@@ -336,6 +372,15 @@ namespace Fanex.AccountingReports.ReportingService.Resources {
         internal static string Soccer_Non_Live {
             get {
                 return ResourceManager.GetString("Soccer_Non_Live", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Super.
+        /// </summary>
+        internal static string Super {
+            get {
+                return ResourceManager.GetString("Super", resourceCulture);
             }
         }
         

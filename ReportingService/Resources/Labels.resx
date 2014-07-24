@@ -249,4 +249,19 @@
   <data name="Win_Loss" xml:space="preserve">
     <value>Win Loss</value>
   </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="BaseRM" xml:space="preserve">
+    <value>Base(RM)</value>
+  </data>
+  <data name="Curency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Super" xml:space="preserve">
+    <value>Super</value>
+  </data>
 </root>
