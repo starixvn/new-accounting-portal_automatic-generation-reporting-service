@@ -57,7 +57,7 @@ namespace Fanex.AccountingReports.ReportingService.Service.Implement.CompanyStat
 
                         var companyStatementInfo = new CompanyStatementInfo
                         {
-                            Date = Converter.ToDateTime(reader["accdate"]).ToShortDateString(),
+                            Date = Converter.ToDateTime(reader["accdate"]).ToString("dddd M/d/yyyy"),
                             Type = Converter.ToString2(reader["transtype"]),
                             Total = total,
                             AccumulatedTotal = accumulatedTotal

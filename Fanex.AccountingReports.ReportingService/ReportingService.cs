@@ -96,6 +96,7 @@ namespace Fanex.AccountingReports.ReportingService
             }
             catch (Exception ex)
             {
+                AppSettings.OnProcessing = false;
                 LogExtensions.ExceptionHandler(ex);
             }
         }
@@ -118,6 +119,7 @@ namespace Fanex.AccountingReports.ReportingService
             }
             catch (Exception ex)
             {
+                AppSettings.OnProcessing = false;
                 LogExtensions.ExceptionHandler(ex);
             }
         }

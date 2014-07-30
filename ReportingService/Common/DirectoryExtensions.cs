@@ -44,7 +44,7 @@ namespace Fanex.AccountingReports.ReportingService.Common
                 for (int i = 0; i < directoryLength - _MaxNumberOfDirectories; i++)
                 {
                     var directory = directories[i];
-                    Directory.Delete(directory);
+                    Directory.Delete(directory, true);
                 }
             }
         }
