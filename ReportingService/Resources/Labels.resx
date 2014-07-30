@@ -124,7 +124,7 @@
     <value>Agent Turnover</value>
   </data>
   <data name="BARM" xml:space="preserve">
-    <value>Base (RM)</value>
+    <value>BARM</value>
   </data>
   <data name="Bet_Type" xml:space="preserve">
     <value>Bet Type</value>

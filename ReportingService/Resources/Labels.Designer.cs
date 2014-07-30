@@ -88,7 +88,7 @@ namespace Fanex.AccountingReports.ReportingService.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Base (RM).
+        ///   Looks up a localized string similar to BARM.
         /// </summary>
         internal static string BARM {
             get {
